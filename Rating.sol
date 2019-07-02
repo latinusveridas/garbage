@@ -21,12 +21,12 @@ contract Rating {
   }
 
   // This function returns the total ratings a movie has received so far
-  function totalVotesFor(bytes32 memory movie) view public returns (uint8) {
+  function totalVotesFor(bytes32 movie) view public returns (uint8) {
     return ratingsReceived[movie];
   }
 
   // This function increments the vote count for the specified movie. Equivalent to upvoting
-  function voteForMovie(bytes32 memory movie) public {
+  function voteForMovie(bytes32 movie) public {
     ratingsReceived[movie] += 1;
   }
 }
