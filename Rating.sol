@@ -1,4 +1,4 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.5.8;
 // We have to specify what version of compiler this code will compile with
 
 contract Rating {
