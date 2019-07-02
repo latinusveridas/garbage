@@ -1,15 +1,5 @@
-module.exports = {
-rpc: {
-host:"localhost",
-port:8543
-},
-networks: {
-development: {
-host: "localhost", 
-port: 8543,
-network_id: "*",
-from: "0xacc8de88f6e2435bac5978a43726a6ce9021092c",
-gas: 20000000
-}
-}
+var Ratings = artifacts.require("./Rating.sol");
+
+module.exports = function(deployer) {
+  deployer.deploy(Ratings,['Star Wars', 'Avatar', 'Inception'], {gas: 6700000});
 };
