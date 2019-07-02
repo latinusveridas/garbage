@@ -1,5 +1,9 @@
-var Ratings = artifacts.require("./Rating.sol");
-
-module.exports = function(deployer) {
-  deployer.deploy(Ratings,['Star Wars', 'Avatar', 'Inception'], {gas: 6700000});
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
+  }
 };
