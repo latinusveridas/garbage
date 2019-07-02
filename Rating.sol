@@ -16,17 +16,17 @@ contract Rating {
   deploy the contract to the blockchain. When we deploy the contract,
   we will pass an array of movies for which users will give ratings
   */
-  function RatingB(bytes32[] movieNames) public {
+  function RatingB(bytes32[] memory movieNames) public {
     movieList = movieNames;
   }
 
   // This function returns the total ratings a movie has received so far
-  function totalVotesFor(bytes32 movie) view public returns (uint8) {
+  function totalVotesFor(bytes32 memory movie) view public returns (uint8) {
     return ratingsReceived[movie];
   }
 
   // This function increments the vote count for the specified movie. Equivalent to upvoting
-  function voteForMovie(bytes32 movie) public {
+  function voteForMovie(bytes32 memory movie) public {
     ratingsReceived[movie] += 1;
   }
 }
