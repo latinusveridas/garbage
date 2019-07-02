@@ -16,7 +16,7 @@ contract Rating {
   deploy the contract to the blockchain. When we deploy the contract,
   we will pass an array of movies for which users will give ratings
   */
-  function Rating(bytes32[] movieNames) public {
+  function RatingB(bytes32[] movieNames) public {
     movieList = movieNames;
   }
 
